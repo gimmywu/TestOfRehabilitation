@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbClassModelStoreContainer" CdmEntityContainer="dbClassEntities">
+    <EntitySetMapping Name="Consultation">
+      <EntityTypeMapping TypeName="dbClassModel.Consultation">
+        <MappingFragment StoreEntitySet="Consultation">
+          <ScalarProperty Name="fConsultId" ColumnName="fConsultId" />
+          <ScalarProperty Name="PatinetId" ColumnName="PatinetId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Assessment" ColumnName="Assessment" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CounsultTypeRecord">
+      <EntityTypeMapping TypeName="dbClassModel.CounsultTypeRecord">
+        <MappingFragment StoreEntitySet="CounsultTypeRecord">
+          <ScalarProperty Name="fid" ColumnName="fid" />
+          <ScalarProperty Name="TypeNameId" ColumnName="TypeNameId" />
+          <ScalarProperty Name="fConsultId" ColumnName="fConsultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

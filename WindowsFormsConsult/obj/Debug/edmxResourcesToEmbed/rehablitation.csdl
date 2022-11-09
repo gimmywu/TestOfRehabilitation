@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rehablitationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Consultation">
+    <Key>
+      <PropertyRef Name="fConsultId" />
+    </Key>
+    <Property Name="fConsultId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatinetId" Type="Int32" />
+    <Property Name="Date" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Summary" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Assessment" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Result" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CounsultTypeRecord" Relationship="Self.FK_CounsultTypeRecord_Consultation" FromRole="Consultation" ToRole="CounsultTypeRecord" />
+  </EntityType>
+  <EntityType Name="CounsultTypeRecord">
+    <Key>
+      <PropertyRef Name="fid" />
+    </Key>
+    <Property Name="fid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeNameId" Type="Int32" Nullable="false" />
+    <Property Name="fConsultId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Consultation" Relationship="Self.FK_CounsultTypeRecord_Consultation" FromRole="CounsultTypeRecord" ToRole="Consultation" />
+  </EntityType>
+  <EntityType Name="TypeNames">
+    <Key>
+      <PropertyRef Name="fid" />
+    </Key>
+    <Property Name="fid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeNameId" Type="Int32" />
+    <Property Name="TypeName" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_CounsultTypeRecord_Consultation">
+    <End Role="Consultation" Type="Self.Consultation" Multiplicity="1" />
+    <End Role="CounsultTypeRecord" Type="Self.CounsultTypeRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consultation">
+        <PropertyRef Name="fConsultId" />
+      </Principal>
+      <Dependent Role="CounsultTypeRecord">
+        <PropertyRef Name="fConsultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="rehablitationEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Consultation" EntityType="Self.Consultation" />
+    <EntitySet Name="CounsultTypeRecord" EntityType="Self.CounsultTypeRecord" />
+    <EntitySet Name="TypeNames" EntityType="Self.TypeNames" />
+    <AssociationSet Name="FK_CounsultTypeRecord_Consultation" Association="Self.FK_CounsultTypeRecord_Consultation">
+      <End Role="Consultation" EntitySet="Consultation" />
+      <End Role="CounsultTypeRecord" EntitySet="CounsultTypeRecord" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

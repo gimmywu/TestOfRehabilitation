@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbClassModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Consultation">
+    <Key>
+      <PropertyRef Name="fConsultId" />
+    </Key>
+    <Property Name="fConsultId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatinetId" Type="int" />
+    <Property Name="Date" Type="nchar" MaxLength="20" />
+    <Property Name="Summary" Type="nchar" MaxLength="50" />
+    <Property Name="Assessment" Type="nchar" MaxLength="150" />
+    <Property Name="Result" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="CounsultTypeRecord">
+    <Key>
+      <PropertyRef Name="fid" />
+    </Key>
+    <Property Name="fid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeNameId" Type="int" Nullable="false" />
+    <Property Name="fConsultId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CounsultTypeRecord_Consultation">
+    <End Role="Consultation" Type="Self.Consultation" Multiplicity="1" />
+    <End Role="CounsultTypeRecord" Type="Self.CounsultTypeRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consultation">
+        <PropertyRef Name="fConsultId" />
+      </Principal>
+      <Dependent Role="CounsultTypeRecord">
+        <PropertyRef Name="fConsultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbClassModelStoreContainer">
+    <EntitySet Name="Consultation" EntityType="Self.Consultation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CounsultTypeRecord" EntityType="Self.CounsultTypeRecord" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CounsultTypeRecord_Consultation" Association="Self.FK_CounsultTypeRecord_Consultation">
+      <End Role="Consultation" EntitySet="Consultation" />
+      <End Role="CounsultTypeRecord" EntitySet="CounsultTypeRecord" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

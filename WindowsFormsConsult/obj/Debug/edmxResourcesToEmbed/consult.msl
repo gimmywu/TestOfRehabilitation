@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RehablitationModelStoreContainer" CdmEntityContainer="RehablitationEntities">
+    <EntitySetMapping Name="CounsultTypeRecord">
+      <EntityTypeMapping TypeName="RehablitationModel.CounsultTypeRecord">
+        <MappingFragment StoreEntitySet="CounsultTypeRecord">
+          <ScalarProperty Name="fConsultId" ColumnName="fConsultId" />
+          <ScalarProperty Name="TypeNameId" ColumnName="TypeNameId" />
+          <ScalarProperty Name="fid" ColumnName="fid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeNames">
+      <EntityTypeMapping TypeName="RehablitationModel.TypeNames">
+        <MappingFragment StoreEntitySet="TypeNames">
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeNameId" ColumnName="TypeNameId" />
+          <ScalarProperty Name="fid" ColumnName="fid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consultation">
+      <EntityTypeMapping TypeName="RehablitationModel.Consultation">
+        <MappingFragment StoreEntitySet="Consultation">
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Assessment" ColumnName="Assessment" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PatinetId" ColumnName="PatinetId" />
+          <ScalarProperty Name="fConsultId" ColumnName="fConsultId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

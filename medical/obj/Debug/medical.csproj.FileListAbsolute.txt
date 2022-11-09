@@ -1,0 +1,8 @@
+D:\資策會上課資料\期中專題\medical\medical\bin\Debug\medical.exe.config
+D:\資策會上課資料\期中專題\medical\medical\bin\Debug\medical.exe
+D:\資策會上課資料\期中專題\medical\medical\bin\Debug\medical.pdb
+D:\資策會上課資料\期中專題\medical\medical\obj\Debug\medical.csproj.AssemblyReference.cache
+D:\資策會上課資料\期中專題\medical\medical\obj\Debug\medical.csproj.SuggestedBindingRedirects.cache
+D:\資策會上課資料\期中專題\medical\medical\obj\Debug\medical.csproj.CoreCompileInputs.cache
+D:\資策會上課資料\期中專題\medical\medical\obj\Debug\medical.exe
+D:\資策會上課資料\期中專題\medical\medical\obj\Debug\medical.pdb
