@@ -66,6 +66,7 @@
             // 
             // btn新增
             // 
+            this.btn新增.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn新增.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn新增.Location = new System.Drawing.Point(747, 407);
             this.btn新增.Name = "btn新增";
@@ -107,8 +108,10 @@
             // 
             // txt內容
             // 
+            this.txt內容.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt內容.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt內容.Location = new System.Drawing.Point(175, 104);
+            this.txt內容.Location = new System.Drawing.Point(173, 104);
             this.txt內容.Multiline = true;
             this.txt內容.Name = "txt內容";
             this.txt內容.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -127,6 +130,8 @@
             // 
             // txt評估
             // 
+            this.txt評估.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt評估.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txt評估.Location = new System.Drawing.Point(173, 245);
             this.txt評估.Multiline = true;
@@ -147,6 +152,8 @@
             // 
             // txt成效
             // 
+            this.txt成效.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt成效.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txt成效.Location = new System.Drawing.Point(173, 388);
             this.txt成效.Multiline = true;
@@ -277,6 +284,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ch1);
             this.panel1.Controls.Add(this.ch10);
@@ -296,6 +304,7 @@
             // 
             // btn修改
             // 
+            this.btn修改.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn修改.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn修改.Location = new System.Drawing.Point(747, 447);
             this.btn修改.Name = "btn修改";
@@ -319,6 +328,7 @@
             // 
             // btn刪除
             // 
+            this.btn刪除.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn刪除.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn刪除.Location = new System.Drawing.Point(747, 487);
             this.btn刪除.Name = "btn刪除";
@@ -446,7 +456,7 @@
             this.Controls.Add(this.btn刪除);
             this.Controls.Add(this.btn修改);
             this.Controls.Add(this.btn新增);
-            this.MaximumSize = new System.Drawing.Size(900, 637);
+            this.MinimumSize = new System.Drawing.Size(900, 637);
             this.Name = "Frmconsult";
             this.Text = "會談";
             this.panel1.ResumeLayout(false);
